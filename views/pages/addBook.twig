@@ -1,0 +1,27 @@
+{% extends "../base.twig" %}
+
+{% block main %}
+	<section>
+		<h2>ajout de livre</h2>
+		<p>{{error}}</p>
+		<form action="/addBook" method="post" enctype="multipart/form-data">
+			<div>
+				<label for="title">title</label>
+				<input type="text" name="title" id="title">
+			</div>
+			<div>
+				<label for="author">Auteur</label>
+				<input type="text" name="author" id="author">
+			</div>
+			<div>
+				<label for="publishedDate">date de publication</label>
+				<input type="date" name="publishedDate" id="publishedDate">
+			</div>
+			<div>
+				<label for="img">image</label>
+				<input type="file" name="img" id="img">
+			</div>
+			<button type="submit">ENVOYER</button>
+		</form>
+	</section>
+{% endblock %}

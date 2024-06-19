@@ -1,0 +1,20 @@
+{% extends "../base.twig" %}
+
+{% block main %}
+	<section>
+		<h2>Formulaire de connexion</h2>
+        <p>{{error}}</p>
+		<form action="/login" method="post">
+			<div>
+				<label for="name">mail</label>
+				<input type="text" id="email" name="email">
+			</div>
+			<div>
+				<label for="firstname">mot de passe</label>
+				<input type="password" id="password" name="password">
+			</div>
+			
+			<button type="submit">ENVOYER</button>
+		</form>
+	</section>
+{% endblock %}

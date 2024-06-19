@@ -1,0 +1,19 @@
+{% extends "../base.twig" %}
+
+{% block main %}
+	<section>
+		<h2>Mes livres</h2>
+		{% if books %}
+			{% for book in books %}
+                <article>
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+
+                    <img src="./assets/img/uploads/{{book.photo}}" alt="sddfgq">
+                </article>
+            {% endfor %}
+		{% else %}
+			<p>Entrez un nouveau livre y en a pas</p>
+		{% endif %}
+	</section>
+{% endblock %}
